@@ -14,10 +14,10 @@
     "fix": "npm run fix:prettier && npm run fix:eslint",
     "fix:prettier": "prettier --write .",
     "fix:eslint": "eslint \"src/**/*.ts\" --fix",
-    "start": "node dist/index.js",
+    "start": "node dist/Application.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/index.ts"
+    "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/Application.ts"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,9 @@
     "url": "https://github.com/khannurien/i-want-typescript/issues"
   },
   "homepage": "https://github.com/khannurien/i-want-typescript#readme",
-  "dependencies": {},
+  "dependencies": {
+    "systeminformation": "^5.10.3"
+  },
   "devDependencies": {
     "@types/jest": "^27.0.3",
     "@types/node": "^17.0.0",
