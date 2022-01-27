@@ -41,7 +41,7 @@ Promise.all([
     })
     ]).then((result) =>{
 
-        console.log(result);
+        //console.log(result);
 
     });
 
@@ -49,7 +49,7 @@ const requestListner = async function(req, res) {
     // const sysinfo = await getSysInfo();
     if(req.url != '/api/v1/sysinfo'){
         res.writeHead(200,'{"Content-Type: application/json"}');
-        return res.end('404 Not Found');
+        return res.end('404 Not Found!');
     }
     else{
         res.writeHead(200,'{"Content-Type: application/json"}');
