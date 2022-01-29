@@ -1,9 +1,9 @@
  # image de départ
- FROM alpine:3.15
+ FROM alpine:3.15 as builder
 
  RUN apk update && apk add nodejs npm
  # chemin de travail
- WORKDIR /src
+ WORKDIR /home/ahajjar/Application_NodeJS/src
 
  # downgrade des privilèges
  #USER node
@@ -22,7 +22,16 @@
  RUN npm run build
 
  # exécution
- CMD ["node","/src/dist/Application.js"]
- #CMD ["npm","run","watch"]
-
  
+ #CMD ["node","./dist/Application.js"]
+ CMD ["npm","run","watch"]
+
+FROM alpine:3.15 as runner
+
+RUN apk --no-cache add ca-certificates
+
+WORKDIR /home/ahajjar/Application_NodeJS/src
+
+COPY --from=builder . ./
+
+CMD ["node", "./dist/Application.js"]
