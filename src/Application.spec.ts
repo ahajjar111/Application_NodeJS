@@ -1,4 +1,4 @@
-
+import { si } from './Application';
 
 describe('typeScript test suite', () => {
   it('should return Cpu if exists or not"', () => {
