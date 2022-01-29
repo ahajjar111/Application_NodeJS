@@ -15,7 +15,7 @@
     "fix:prettier": "prettier --write .",
     "fix:eslint": "eslint \"src/**/*.ts\" --fix",
     "start": "node dist/Application.js",
-    "test": "jest",
+    "test": "jest --forceExit",
     "test:coverage": "jest --coverage",
     "watch": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' src/Application.ts"
   },
