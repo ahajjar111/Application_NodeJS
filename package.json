@@ -23,6 +23,14 @@
     "type": "git",
     "url": "git+https://github.com/khannurien/i-want-typescript.git"
   },
+  "keywords":[
+    "example",
+    "heroku"
+ ],
+  "engines":{
+    "node":"16.13.2",
+    "npm":"8.1.2"
+ },
   "author": "Vincent Lannurien",
   "license": "MIT",
   "bugs": {
