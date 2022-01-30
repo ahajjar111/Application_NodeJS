@@ -1,4 +1,4 @@
-name: sysinfo actions
+name: sysinfo
 on:
   push:
     branches: [ main ]
